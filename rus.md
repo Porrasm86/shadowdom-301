@@ -348,6 +348,6 @@ First Out, «последним пришёл — первым ушёл»*) — �
 [8]: http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/
 [9]: http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/
 
-[деревья]: img/stacking.png
-[точки вставки]: img/shadow-insertion-point.png
+[деревья]: img/stacking-ru.png
+[точки вставки]: img/shadow-insertion-point-ru.png
 [Визуализатор]: img/visualizer.png
