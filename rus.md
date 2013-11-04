@@ -27,7 +27,7 @@
 ![Прикрепление нескольких теневых деревьев][деревья]
 
 <div class="demo">
-  <div id="example1">Host node</div>
+  <div id="example1">Ведущий элемент</div>
 </div>
 
 <script src="js/example-1.js"></script>
@@ -83,7 +83,7 @@ DOM)» в инструментах разработчика чтобы имет�
 ![Теневые точки вставки][точки вставки]
 
 <div class="demo">
-  <div id="example2">Host node</div>
+  <div id="example2">Ведущий элемент</div>
 </div>
 
 <script src="js/example-2.js"></script>
@@ -246,10 +246,10 @@ DOM)» в инструментах разработчика чтобы имет�
     </script>
 
 <div id="example4" style="display:none">
-  <h2>Eric</h2>
-  <h2>Bidelman</h2>
-  <div>Digital Jedi</div>
-  <h4>footer text</h4>
+  <h2>Эрик</h2>
+  <h2>Бидельман</h2>
+  <div>Цифровой джедай</div>
+  <h4>текст подвала</h4>
 </div>
 
 <p><template id="sdom">
@@ -263,7 +263,7 @@ DOM)» в инструментах разработчика чтобы имет�
     <content select="h4:first-of-type"></content>
   </footer>
 </template></p>
-<div id="example4-log" class="demoarea">
+<div id="example4-log" class="demo">
  <textarea readonly></textarea>
 </div>
 
