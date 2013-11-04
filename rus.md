@@ -26,7 +26,11 @@
 
 ![Прикрепление нескольких теневых деревьев][деревья]
 
-<iframe src="http://codepen.io/NatalieF/pen/rDoCK"></iframe>
+<div class="demoarea">
+  <div id="example1">Host node</div>
+</div>
+
+<script src="js/example-1.js"></script>
 
 **Подсказка:** Активируйте «Отображать теневую модель документа (Show Shadow 
 DOM)» в инструментах разработчика чтобы иметь возможность просматривать корневые 
@@ -78,7 +82,11 @@ DOM)» в инструментах разработчика чтобы имет�
 
 ![Теневые точки вставки][точки вставки]
 
-<iframe src="http://codepen.io/NatalieF/pen/ClLDm"></iframe>
+<div class="demoarea">
+  <div id="example2">Host node</div>
+</div>
+
+<script src="js/example-2.js"></script>
 
 В этом примере есть несколько интересных особенностей:
 
@@ -237,7 +245,29 @@ DOM)» в инструментах разработчика чтобы имет�
     });
     </script>
 
-<iframe src="http://codepen.io/NatalieF/pen/FdAcK"></iframe>
+<div id="example4" style="display:none">
+  <h2>Eric</h2>
+  <h2>Bidelman</h2>
+  <div>Digital Jedi</div>
+  <h4>footer text</h4>
+</div>
+
+<p><template id="sdom">
+  <header>
+    <content select="h2"></content>
+  </header>
+  <section>
+    <content select="div"></content>
+  </section>
+  <footer>
+    <content select="h4:first-of-type"></content>
+  </footer>
+</template></p>
+<div id="example4-log" class="demoarea">
+ <textarea readonly></textarea>
+</div>
+
+<script src="js/example-4.js"></script>
 
 ## Инструмент: Визуализатор теневой модели документа
 
@@ -272,10 +302,55 @@ DOM)» в инструментах разработчика чтобы имет�
 ведущего элемента. Желтая рамка вокруг «Я узел в ведущем элементе» обозначает 
 что это распределённый узел, вставленный через точку вставки `<content>`.
 
-<iframe src="http://codepen.io/NatalieF/pen/DelIv"></iframe> 
-
 Кнопки «Воспроизведение события» показывают какие действия можно попробовать 
 применить.  
+
+<div id="example5" class="demoarea">
+  <div data-host>
+    <div class="blue">I'm a node in the host</div>
+  </div>
+
+  <template style="display:none;"><!-- display:none used for older browsers -->
+    <style>
+    .scopestyleforolderbrowsers * {
+      border: 4px solid #FC0;
+    }
+    .scopestyleforolderbrowsers input {
+      padding: 5px;
+    }
+    .scopestyleforolderbrowsers div {
+      background: #FC0;
+      padding: 5px;
+      border-radius: 3px;
+      margin: 5px 0;
+    }
+    content::-webkit-distributed(*) {
+      border: 4px solid #FC0;
+    }
+    </style>
+    <section class="scopestyleforolderbrowsers">
+      <div>I'm a node in Shadow DOM</div>
+      <div>I'm a node in Shadow DOM</div>
+      <content></content>
+      <input type="text" placeholder="I'm in Shadow DOM">
+      <div>I'm a node in Shadow DOM</div>
+      <div>I'm a node in Shadow DOM</div>
+    </section>
+  </template>
+
+  <aside class="cursor"></aside>
+
+  <div class="buttons">
+    <button data-action="playAnimation" data-action-idx="1">Play Action 1</button><br>
+    <button data-action="playAnimation" data-action-idx="2">Play Action 2</button><br>
+    <button data-action="playAnimation" data-action-idx="3">Play Action 3</button><br>
+    <button data-action="clearLog">Clear log</button>
+  </div>
+
+  <output></output>
+</div>
+
+<script src="js/example-5.js"></script>
 
 **Воспроизведение события 1**
 
@@ -338,8 +413,8 @@ First Out, «последним пришёл — первым ушёл»*) — �
 использовать Google Chrome и активировать «Отображать теневую модель документа 
 (Show Shadow DOM)» в инструментах разработчика.
 
-[1]: http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/
-[2]: http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/
+[1]: /shadowdom/
+[2]: /shadowdom-201/
 [3]: http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/#toc-separation-separate
 [4]: http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301/#youngest-tree
 [5]: http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301/#toc-shadow-insertion
