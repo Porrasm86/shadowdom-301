@@ -310,6 +310,9 @@ DOM)» в инструментах разработчика чтобы имет�
 overflow: hidden;
 position: relative;  
 }
+.buttons{
+overflow: hidden;  
+}
 .cursor {
 background-image: url(img/cursor.svg);
 width: 36px;
@@ -328,7 +331,7 @@ background: #eee;
 text-align: center;
 position: relative;
 float: left;
-margin: 0 25px 0 0;
+margin: 0 .5rem .5rem 0;
 }
 .demo .blue {
 background: steelblue;
@@ -347,7 +350,132 @@ overflow: auto;
 padding: 10px;
 display: block;
 clear: both;
-}</style>
+}
+
+@-webkit-keyframes animation1 {
+  from {
+    opacity: 1;
+    -webkit-transform: translate3d(70px, -40px, 0);
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: translate3d(70px, 280px, 0);
+  }
+  to {
+    -webkit-transform: translate3d(70px, 280px, 0);
+  }
+}
+
+@-webkit-keyframes animation2 {
+  from {
+    opacity: 1;
+    -webkit-transform: translate3d(240px, -40px, 0);
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: translate3d(240px, 280px, 0);
+  }
+  to {
+    -webkit-transform: translate3d(240px, 280px, 0);
+  }
+}
+
+@-webkit-keyframes animation3 {
+  from {
+    opacity: 1;
+    -webkit-transform: translate3d(240px, -40px, 0);
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: translate3d(240px, 128px, 0);
+  }
+  91% {
+    opacity: 1;
+    -webkit-transform: translate3d(240px, 128px, 0) rotateX(30deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(240px, 128px, 0);
+  }
+}
+
+
+
+@keyframes animation1 {
+  from {
+    opacity: 1;
+    -webkit-transform: translate3d(70px, -40px, 0);
+    transform: translate3d(70px, -40px, 0);
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: translate3d(70px, 280px, 0);
+    transform: translate3d(70px, 280px, 0);
+  }
+  to {
+    -webkit-transform: translate3d(70px, 280px, 0);
+    transform: translate3d(70px, 280px, 0);
+  }
+}
+
+@keyframes animation2 {
+  from {
+    opacity: 1;
+    -webkit-transform: translate3d(240px, -40px, 0);
+    transform: translate3d(240px, -40px, 0);
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: translate3d(240px, 280px, 0);
+    transform: translate3d(240px, 280px, 0);
+  }
+  to {
+    -webkit-transform: translate3d(240px, 280px, 0);
+    transform: translate3d(240px, 280px, 0);
+  }
+}
+
+@keyframes animation3 {
+  from {
+    opacity: 1;
+    -webkit-transform: translate3d(240px, -40px, 0);
+    transform: translate3d(240px, -40px, 0);
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: translate3d(240px, 128px, 0);
+    transform: translate3d(240px, 128px, 0);
+  }
+  91% {
+    opacity: 1;
+    -webkit-transform: translate3d(240px, 128px, 0) rotateX(30deg);
+    transform: translate3d(240px, 128px, 0) rotateX(30deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(240px, 128px, 0);
+    transform: translate3d(240px, 128px, 0);
+  }
+}
+
+#example5.playing.animation1 .cursor {
+  -webkit-animation: animation1 5s;
+  animation: animation1 5s;
+}
+#example5.playing.animation2 .cursor {
+  -webkit-animation: animation2 5s;
+  animation: animation2 5s;
+}
+#example5.playing.animation3 .cursor {
+  -webkit-animation: animation3 5s;
+  animation: animation3 5s;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+</style>
 
 <div id="example5" class="demo">
   <div data-host>
