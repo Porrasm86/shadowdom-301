@@ -305,9 +305,38 @@ DOM)» в инструментах разработчика чтобы имет�
 Кнопки «Воспроизведение события» показывают какие действия можно попробовать 
 применить.  
 
+<style>.demo .cursor {
+background-image: url(img/cursor.svg);
+width: 36px;
+height: 40px;
+background-size: contain;
+background-repeat: no-repeat;
+opacity: 0;
+pointer-events: none;
+position: absolute;
+}
+.demo .blue {
+background: steelblue;
+color: white;
+display: inline-block;
+}
+.demo div {
+padding: 5px;
+border-radius: 3px;
+margin-bottom: 5px;
+}
+.demo output {
+background: #eee;
+height: 150px;
+overflow: auto;
+padding: 10px;
+display: block;
+clear: both;
+}</style>
+
 <div id="example5" class="demo">
-  <div data-host style="width:50%;">
-    <div class="blue">I'm a node in the host</div>
+  <div data-host>
+    <div class="blue">Я узел в ведущем элементе</div>
   </div>
 
   <template style="display:none;"><!-- display:none used for older browsers -->
@@ -329,22 +358,22 @@ DOM)» в инструментах разработчика чтобы имет�
     }
     </style>
     <section class="scopestyleforolderbrowsers">
-      <div>I'm a node in Shadow DOM</div>
-      <div>I'm a node in Shadow DOM</div>
+      <div>Я узел в теневом дереве</div>
+      <div>Я узел в теневом дереве</div>
       <content></content>
-      <input type="text" placeholder="I'm in Shadow DOM">
-      <div>I'm a node in Shadow DOM</div>
-      <div>I'm a node in Shadow DOM</div>
+      <input type="text" placeholder="Я в теневом дереве">
+      <div>Я узел в теневом дереве</div>
+      <div>Я узел в теневом дереве</div>
     </section>
   </template>
 
   <aside class="cursor"></aside>
 
   <div class="buttons">
-    <button data-action="playAnimation" data-action-idx="1">Play Action 1</button><br>
-    <button data-action="playAnimation" data-action-idx="2">Play Action 2</button><br>
-    <button data-action="playAnimation" data-action-idx="3">Play Action 3</button><br>
-    <button data-action="clearLog">Clear log</button>
+    <button data-action="playAnimation" data-action-idx="1">Воспроизвести событие 1</button><br>
+    <button data-action="playAnimation" data-action-idx="2">Воспроизвести событие 2</button><br>
+    <button data-action="playAnimation" data-action-idx="3">Воспроизвести событие 3</button><br>
+    <button data-action="clearLog">Очистить лог</button>
   </div>
 
   <output></output>
