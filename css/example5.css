@@ -15,7 +15,7 @@ opacity: 0;
 pointer-events: none;
 position: absolute;
 }
-.demo div[data-host]{
+#example5 div[data-host]{
 padding: 25px;
 border: 3px solid black;
 display: inline-block;
