@@ -6,7 +6,7 @@ position: relative;
 overflow: hidden;  
 }
 .cursor {
-background-image: url(img/cursor.svg);
+background-image: url(../img/cursor.svg);
 width: 36px;
 height: 40px;
 background-size: contain;
