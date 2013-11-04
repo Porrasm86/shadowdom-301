@@ -150,6 +150,22 @@ clear: both;
   }
 }
 
+#example5 [data-host]:before {
+top: 3px;
+left: 3px;
+position: absolute;
+content: '<div data-host>';
+color: #888;
+font-size: 13px;
+line-height: 16px;
+}
+
+#example5 div {
+padding: 5px;
+border-radius: 3px;
+margin-bottom: 5px;
+}
+
 #example5.playing.animation1 .cursor {
   -webkit-animation: animation1 5s;
   animation: animation1 5s;
