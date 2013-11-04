@@ -305,7 +305,12 @@ DOM)» в инструментах разработчика чтобы имет�
 Кнопки «Воспроизведение события» показывают какие действия можно попробовать 
 применить.  
 
-<style>.demo .cursor {
+<style>
+.demo{
+overflow: hidden;
+position: relative;  
+}
+.cursor {
 background-image: url(img/cursor.svg);
 width: 36px;
 height: 40px;
@@ -314,6 +319,16 @@ background-repeat: no-repeat;
 opacity: 0;
 pointer-events: none;
 position: absolute;
+}
+.demo [data-host]{
+padding: 25px;
+border: 3px solid black;
+display: inline-block;
+background: #eee;
+text-align: center;
+position: relative;
+float: left;
+margin: 0 25px 0 0;
 }
 .demo .blue {
 background: steelblue;
