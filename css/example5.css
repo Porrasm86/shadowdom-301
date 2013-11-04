@@ -15,7 +15,7 @@ opacity: 0;
 pointer-events: none;
 position: absolute;
 }
-.demo [data-host]{
+.demo div[data-host]{
 padding: 25px;
 border: 3px solid black;
 display: inline-block;
@@ -24,6 +24,9 @@ text-align: center;
 position: relative;
 float: left;
 margin: 0 .5rem .5rem 0;
+
+font-size: 13px;
+line-height: 16px;
 }
 .demo .blue {
 background: steelblue;
@@ -34,6 +37,9 @@ display: inline-block;
 padding: 5px;
 border-radius: 3px;
 margin-bottom: 5px;
+
+font-size: 13px;
+line-height: 16px;
 }
 .demo output {
 background: #eee;
@@ -42,6 +48,9 @@ overflow: auto;
 padding: 10px;
 display: block;
 clear: both;
+
+font-size: 13px;
+line-height: 16px;
 }
 
 @-webkit-keyframes animation1 {
@@ -164,6 +173,8 @@ line-height: 16px;
 padding: 5px;
 border-radius: 3px;
 margin-bottom: 5px;
+font-size: 13px;
+line-height: 16px;
 }
 
 #example5.playing.animation1 .cursor {
